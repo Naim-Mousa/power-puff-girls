@@ -1,17 +1,17 @@
 import java.lang.*;
 import java.util.*;
-import java.util.List;
+import java.util.Arrays;
 
 // Recipe class where each instance of a recipe will be created
-public class Recipe{
+class Recipe{
 
 	private String name;
 	private String description;
 	private String ingredients;
-	private List<String> instructions;
+	private String [] instructions;
 
 	// Constructor method
-	Recipe(String name, String description, String ingredients, List<String> instructions){
+	Recipe(String name, String description, String ingredients, String [] instructions){
 
 		this.name = name;
 		this.description = description;
@@ -24,7 +24,7 @@ public class Recipe{
   	// INPUT: none
   	// PROCESSING: Takes attributes of instance of Recipe class
   	// OUTPUT: Prints out all attributes (entire recipe)
-	public displayRecipe(){
+	public void displayRecipe(){
 
 		System.out.println("#---------------------------------#");
 		System.out.println(this.name);
@@ -32,7 +32,7 @@ public class Recipe{
 		System.out.println(this.ingredients);
 		
 		for (String i : this.instructions){
-			System.out.println(i)
+			System.out.println(i);
 		}
 
 		System.out.println("#---------------------------------#");
