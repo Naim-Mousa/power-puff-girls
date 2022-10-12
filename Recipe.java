@@ -56,41 +56,54 @@ class Recipe{
 			num++;
 		}
 
-		
-
 	}
 
-
-
-}
-
-
-public class Main {
-    public static void main(String[] args) {
-        return;
-    }
-
-    public static Recipe findRecipe(String recipeName, Map<String, Recipe> Recipes) {
-        for (Map.Entry<String,Recipe> entry : Recipes.entrySet())  {
-            if (recipeName.equals(entry.getKey())) {
-                return entry.getValue();
-            }
-        }
-        return null;
-    }
-
-    public static void steps(String[] instructions) {
-        for (String instruction : instructions) {
-            System.out.println(instruction + '\n');
-            System.out.println("Press \"ENTER\" to continue... or type \"QUIT\" to exit the instructions.");
-            Scanner scanner = new Scanner(System.in);
-            String readString = scanner.nextLine();
-            if (readString.isEmpty()) {
-                continue;
-            } else {
-                break;
-            }
-        }
-    }
+    public void displaySteps(){
+	    for (String instruction : this.instructions) {
+	        System.out.println(instruction + '\n');
+	        System.out.println("Press \"ENTER\" to continue... or type \"QUIT\" to exit the instructions.");
+	        Scanner scanner = new Scanner(System.in);
+	        String readString = scanner.nextLine();
+	        if (readString.isEmpty()) {
+	            continue;
+	        } else {
+	            break;
+	        }
+	    }
+	}
 
 }
+
+// I put the findRecipe function in the main file
+// and made the steps method a Recipe class method
+// - Naim
+
+// public class Main {
+//     public static void main(String[] args) {
+//         return;
+//     }
+
+//     public static Recipe findRecipe(String recipeName, Map<String, Recipe> Recipes) {
+//         for (Map.Entry<String,Recipe> entry : Recipes.entrySet())  {
+//             if (recipeName.equals(entry.getKey())) {
+//                 return entry.getValue();
+//             }
+//         }
+//         return null;
+//     }
+
+//     public static void steps(String[] instructions) {
+//         for (String instruction : instructions) {
+//             System.out.println(instruction + '\n');
+//             System.out.println("Press \"ENTER\" to continue... or type \"QUIT\" to exit the instructions.");
+//             Scanner scanner = new Scanner(System.in);
+//             String readString = scanner.nextLine();
+//             if (readString.isEmpty()) {
+//                 continue;
+//             } else {
+//                 break;
+//             }
+//         }
+//     }
+
+// }
