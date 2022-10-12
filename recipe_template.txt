@@ -1,5 +1,5 @@
 [Insert Recipe name]
-[Insert description as one big paragraph where each sentence is separate by a period. Also don't add a space before the start of a new sentence like this (ex. Hi my name is Nicole.I am creating a new recipe.The recipe is very good.]
-[Insert all ingredients in one line where each ingredient is separated by a comma. Also don't add a space after the comma (ex. Apple,bread, milk)]
-[Insert instructions as one big paragraph where each sentence (instruction) is separated by a period. Also don't add a space before the start of a new sentence.]
+[Insert description as one big paragraph where each sentence is separate by a period. Also don't add a space before the start of a new sentence like this (ex. Hi my name is Nicole.I am creating a new recipe.This recipe is very good.]
+[Insert all ingredients in one line where each ingredient is separated by a comma. Also don't add a space after the comma (ex. Apple,bread,milk)]
+[Insert instructions as one big paragraph where each sentence (instruction) is separated by a period. Also don't add a space before the start of a new sentence like this (ex. Hi my name is Nicole.I am creating a new recipe.This recipe is very good.]
 
