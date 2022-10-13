@@ -238,6 +238,52 @@ public class RecipeBook{
         }
         return null;
     }
+    
+    	// Allows users to create a recipe by inputting all of the recipe information
+    	// via the command line 
+    	public static void inputRecipe(Map <String, Recipe> recipes) {
+		
+		
+		/* Naim somewhere in here if you can display a message that tells the user to input their description and instructions 
+		 * as one big paragraph where each sentence is separate by a period. Also remind them not to add a space before the start of a new sentence 
+		 * like this (ex.Hi my name is Nicole.I am creating a new recipe.The recipe is very good.]
+		 * Also for the ingredients, let them know that they should enter the ingredients as one big line 
+		 * where each ingredient is separated by a comma. Also don't add a space after the comma (ex. Apple,bread,milk)]
+		 */
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("\nEnter the recipe name: ");
+		String recipeName = input.nextLine();
+		
+		// ask user to enter descritpion as one big paragraph 
+		System.out.print("Enter the description:  ");
+		String strDescription = input.nextLine();
+		
+		// ask user to enter ingredients in a comma seperated line
+		System.out.print("Enter the ingredients: ");
+		String strIngredients = input.nextLine();
+		
+		// ask user to enter instructions as one paragraph
+		System.out.print("Enter the instructions: "); 
+		String strInstruction = input.nextLine();
+		
+		// Since description is one big paragraph, we will get the individual sentences by using the split method
+		String [] description = strDescription.split("\\.");
+		
+		// Since ingredients is one big line where ingredients are seperated by commas, 
+		// we can get the individual ingredients using the split method
+		String [] ingredients = strIngredients.split(",");
+		
+		// Since instructions is one big paragraph, we will get the individual sentences by using the split method
+		String [] instructions = strInstruction.split("\\."); 
+		
+		// Now use this recipe information to create a new Recipe object
+		Recipe newRecipe = new Recipe(recipeName, description, ingredients, instructions);
+
+		// add this new recipe to our dictionary recipes
+		recipes.put(recipeName, newRecipe);
+		
+	}
 
 }
 
