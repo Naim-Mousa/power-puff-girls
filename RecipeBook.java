@@ -288,7 +288,7 @@ public class RecipeBook{
 		// When a user creates a recipe, it should be saved to a disk in a location within your Git repo
 	
 		// allows us to use the recipe name inputted by the user as the file name without the extra spaces in between
-		String fileName = recipeName.replaceAll("\\s","");
+		String fileName = recipeName.replaceAll("\\s","_");
 		fileName+=".txt";
 	
 		// allows us to create a new file with the recipe name 
