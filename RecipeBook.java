@@ -14,6 +14,10 @@ public class RecipeBook{
 		// value = recipe object
 		Map <String, Recipe> recipes = new HashMap <String, Recipe>();
 
+		createRecipe(recipes,"black_bean_tostadas.txt");
+		createRecipe(recipes,"french_pizza_bread.txt");
+		createRecipe(recipes,"egg_salad.txt");
+
 		System.out.println("___________________________________");
 		System.out.println("===================================");
 		System.out.println("Hi! Welcome to your Recipe Book!");
