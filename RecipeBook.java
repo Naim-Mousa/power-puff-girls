@@ -36,7 +36,7 @@ public class RecipeBook{
 
 			if (input.equals("upload")){
 
-				while(!input.equals("exit") && !input.equals("back")){
+				while(!input.equals("exit")){
 
 					System.out.println();
 					System.out.println("-----------------------------------");
@@ -64,7 +64,7 @@ public class RecipeBook{
 						System.out.println("Once you have made your desired changes, symply input the name of the text file.");
 						System.out.println("-----------------------------------");
 						System.out.println();
-						System.out.println("Enter the name of your recipe text file: ");
+						System.out.print("Enter the name of your recipe text file: ");
 
 						input = scan.nextLine();
 
@@ -103,7 +103,7 @@ public class RecipeBook{
 			// Searching for recipe
 			else if(input.equals("search")){
 
-				while (!input.equals("exit") && !input.equals("back")){
+				while (!input.equals("exit")){
 
 					System.out.println();
 					System.out.println("###################################");
@@ -234,7 +234,8 @@ public class RecipeBook{
 				continue;
 			}
 		}
-		
+
+		System.out.println("Until next time!");
 	}
 
 /*
@@ -385,16 +386,19 @@ public class RecipeBook{
 	String recipeName = input.nextLine();
 	
 	// ask user to enter descritpion as one big paragraph 
+	System.out.println();
 	System.out.println("Insert description as one big paragraph where each sentence is separate by a period.\nAlso don't add a space before the start of a new sentence as shown below\n(ex. Hi my name is Nicole.I am creating a new recipe.This recipe is very good.)");
 	System.out.print("Enter the description:  ");
 	String strDescription = input.nextLine();
 	
 	// ask user to enter ingredients in a comma seperated line
+	System.out.println();
 	System.out.println("Insert all ingredients in one line where each ingredient is separated by a comma.\nAlso don't add a space after the comma (ex. Apple,bread,milk)");
 	System.out.print("Enter the ingredients: ");
 	String strIngredients = input.nextLine();
 	
 	// ask user to enter instructions as one paragraph
+	System.out.println();
 	System.out.println("Insert instructions as one big paragraph where each sentence (instruction) is separated by a period.\nAlso don't add a space before the start of a new sentence as shown below\n(ex. Hi my name is Nicole.I am creating a new recipe.This recipe is very good.)");
 	System.out.print("Enter the instructions: "); 
 	String strInstruction = input.nextLine();
