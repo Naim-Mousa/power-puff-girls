@@ -15,7 +15,7 @@ class Recipe{
 	
 	
 	// Constructor method
-	Recipe(String name, String[] description, String [] ingredients, String [] instructions){
+	Recipe(String name, String[] description, String[] ingredients, String[] instructions){
 
 		this.name = name;
 		this.description = description;
@@ -23,7 +23,41 @@ class Recipe{
 		this.instructions = instructions;
 
 	}
+
+	// Getter methods for each attribute
+	public String getName(){
+		return this.name;
+	}
 	
+	public String[] getDescrip(){
+		return this.description;
+	}
+
+	public String[] getIngred(){
+		return this.ingredients;
+	}
+	
+	public String[] getInstruct(){
+		return this.instructions;
+	}
+
+	// Setter methods for each attribute
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public void setDescrip(String[] description){
+		this.description = description;
+	}
+
+	public void setIngred(String[] ingredients){
+		this.ingredients = ingredients;
+	}
+	
+	public void setInstruct(String [] instructions){
+		this.instructions = instructions;
+	}
+
 	// METHOD: displayRecipe
   	// INPUT: none
   	// PROCESSING: Takes attributes of instance of Recipe class
@@ -58,6 +92,11 @@ class Recipe{
 
 	}
 
+	// METHOD: displaySteps
+  	// INPUT: none
+  	// PROCESSING: Takes the instance object of a recipe
+  	// and iterates through its step-by-step instructions.
+  	// OUTPUT: Each step of the recipe after the user prompts it to be printed.
     public void displaySteps(){
 	    for (String instruction : this.instructions) {
 	        System.out.println(instruction + '\n');
@@ -107,3 +146,9 @@ class Recipe{
 //     }
 
 // }
+
+
+
+
+
+
