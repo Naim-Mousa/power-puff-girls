@@ -6,7 +6,8 @@ import java.io.*;
 
 public class RecipeBook{
 
-	public static void main(String[] args) throws FileNotFoundException{
+	// added the IO exception, which was needed to create a file in your disk from users input
+	public static void main(String[] args) throws FileNotFoundException,IOException{
 
 		// implementing a dictionary using HashMap 
 		// keys = recipe name 
@@ -238,10 +239,11 @@ public class RecipeBook{
         }
         return null;
     }
-    
+    	
     	// Allows users to create a recipe by inputting all of the recipe information
     	// via the command line 
-    	public static void inputRecipe(Map <String, Recipe> recipes) {
+    	// also I added the IO exception, which was needed to create a file in your disk from users input
+    	public static void inputRecipe(Map <String, Recipe> recipes) throws IOException{
 		
 		
 		/* Naim somewhere in here if you can display a message that tells the user to input their description and instructions 
@@ -282,6 +284,28 @@ public class RecipeBook{
 
 		// add this new recipe to our dictionary recipes
 		recipes.put(recipeName, newRecipe);
+		
+		// When a user creates a recipe, it should be saved to a disk in a location within your Git repo
+	
+		// allows us to use the recipe name inputted by the user as the file name without the extra spaces in between
+		String fileName = recipeName.replaceAll("\\s","_");
+		fileName+=".txt";
+	
+		// allows us to create a new file with the recipe name 
+		File file = new File(fileName);
+		FileWriter writer  = new FileWriter(file);
+		PrintWriter printToFile = new PrintWriter(writer);
+	
+		// printToFile allows us to write to the new file created
+		// we will write the recipe name as the first line
+		// second line description
+		// third line ingredients
+		// fourth line instructions
+		printToFile.println(recipeName);
+		printToFile.println(strDescription);
+		printToFile.println(strIngredients);
+		printToFile.println(strInstruction);
+		printToFile.close();
 		
 	}
 
